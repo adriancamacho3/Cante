@@ -1,0 +1,26 @@
+PODS:
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - CSV.swift (2.1.0)
+  - MIKMIDI (1.6.2)
+
+DEPENDENCIES:
+  - Charts
+  - CSV.swift (~> 2.1)
+  - MIKMIDI (~> 1.6)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Charts
+    - CSV.swift
+    - MIKMIDI
+
+SPEC CHECKSUMS:
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  CSV.swift: a24fb11c17875523783fe963592762ff163ef8ea
+  MIKMIDI: fa6df0bfa8427a0dc9e179bcf068b2b4b6747e6c
+
+PODFILE CHECKSUM: 1678b2a0180c2a96ea9e1da67d6e124959799965
+
+COCOAPODS: 1.5.0
