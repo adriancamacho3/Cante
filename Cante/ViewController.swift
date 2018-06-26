@@ -8,8 +8,6 @@
 
 import Cocoa
 import CSV
-import Charts
-import MIKMIDI
 import AVFoundation
 
 var onset: [String] = []
