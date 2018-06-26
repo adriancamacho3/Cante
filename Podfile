@@ -7,6 +7,4 @@ target 'Cante' do
 
   # Pods for Cante
   pod 'CSV.swift', '~> 2.1'
-  pod 'MIKMIDI', '~> 1.6'
-  pod 'Charts'
 end
