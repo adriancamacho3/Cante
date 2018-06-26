@@ -11,8 +11,10 @@ Cante app is designed and built for the macOS Operating System (OS).
 
 ### Installing
 
-To use the application, you must allow the use of the application by the Operating System. To do this, after double clicking on the icon of the application, you access System Preferences -> Security and Privacy -> General and in the section "Allow apps downloaded from:" click on "Open also".
-No additional installation is required, simply double-click on the application icon.
+To use the code, you must perform a series of actions:
+* Unzip the file Cante.xcodeproj.zip
+* Install [CocoaPods](https://cocoapods.org)
+* Use CocoaPods to install project dependencies (pod install)
 
 ## Built With
 
