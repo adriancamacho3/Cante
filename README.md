@@ -18,7 +18,7 @@ No additional installation is required, simply double-click on the application i
 
 * [Swift](https://www.apple.com/es/swift/) - User interface
 * [Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html) - Bridge between Swift and C++
-* [C++] - Main code of the application
+* C++ - Main code of the application
 
 ## Versioning
 
