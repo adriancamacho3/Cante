@@ -684,7 +684,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Cante" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="594" y="416" width="410" height="310"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -747,17 +747,71 @@
                                     <action selector="buttonAction:" target="XfG-lQ-9wD" id="JHG-Xz-PSl"/>
                                 </connections>
                             </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="bbz-QT-o3l">
+                                <rect key="frame" x="304" y="148" width="147" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="5wO-et-Hbt"/>
+                                    <constraint firstAttribute="height" constant="137" id="VAr-fW-E4J"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="137" id="oET-i8-UNQ"/>
+                                    <constraint firstAttribute="width" constant="147" id="xLr-4D-fgh"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="csv" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3ro-Md-g0O">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="csvButtonAction:" target="XfG-lQ-9wD" id="co6-CG-HKT"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="SdP-6T-FC5">
+                                <rect key="frame" x="506" y="148" width="147" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="2q2-ds-5aE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="137" id="MMv-o0-uwF"/>
+                                    <constraint firstAttribute="width" constant="147" id="diW-RA-W5h"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="vXd-zy-aXp"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="jpg" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="P2Z-JE-LYj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="jpgButtonAction:" target="XfG-lQ-9wD" id="vDx-3c-6fX"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="15i-4n-Dup">
+                                <rect key="frame" x="102" y="148" width="147" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="4D2-CH-vhl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="137" id="ggw-HU-VO9"/>
+                                    <constraint firstAttribute="width" constant="147" id="nKU-XY-cZg"/>
+                                    <constraint firstAttribute="height" constant="137" id="nTj-6S-LjV"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="midi" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="YNj-wY-8u9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="midiButtonAction:" target="XfG-lQ-9wD" id="BWk-wD-HOa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="NoM-Mn-GA7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="25" id="5EL-UN-f0P"/>
                             <constraint firstAttribute="bottom" secondItem="d23-3R-obg" secondAttribute="bottom" id="7DN-PO-QCE"/>
+                            <constraint firstItem="SdP-6T-FC5" firstAttribute="leading" secondItem="NBe-nH-eQE" secondAttribute="trailing" constant="8" id="ANE-aA-tNQ"/>
                             <constraint firstItem="FEW-8g-vid" firstAttribute="leading" secondItem="NoM-Mn-GA7" secondAttribute="trailing" constant="50" id="AzB-gS-ypc"/>
                             <constraint firstAttribute="trailing" secondItem="d23-3R-obg" secondAttribute="trailing" id="BUr-kg-4O4"/>
                             <constraint firstAttribute="trailing" secondItem="5ag-vn-lYI" secondAttribute="trailing" constant="20" id="LA2-y9-OK7"/>
                             <constraint firstItem="NBe-nH-eQE" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Vuo-rG-ttY"/>
                             <constraint firstAttribute="bottom" secondItem="NoM-Mn-GA7" secondAttribute="bottom" constant="17" id="YUf-Kh-bqF"/>
+                            <constraint firstItem="bbz-QT-o3l" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="dbt-uM-QEd"/>
                             <constraint firstItem="d23-3R-obg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gKy-kK-GdK"/>
                             <constraint firstAttribute="bottom" secondItem="5ag-vn-lYI" secondAttribute="bottom" constant="20" id="lhh-x3-FkW"/>
+                            <constraint firstItem="NBe-nH-eQE" firstAttribute="leading" secondItem="15i-4n-Dup" secondAttribute="trailing" constant="8" id="oZt-Qu-pRO"/>
+                            <constraint firstItem="15i-4n-Dup" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="pdm-ez-FX3"/>
+                            <constraint firstItem="bbz-QT-o3l" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="qSx-0F-xsl"/>
+                            <constraint firstItem="SdP-6T-FC5" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="qfX-Fy-36A"/>
                             <constraint firstItem="d23-3R-obg" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="vhk-hu-7At"/>
                             <constraint firstItem="NBe-nH-eQE" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-15" id="wtB-GN-tvr"/>
                             <constraint firstAttribute="bottom" secondItem="FEW-8g-vid" secondAttribute="bottom" constant="19" id="x16-I8-FC1"/>
@@ -765,8 +819,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="csvButton" destination="bbz-QT-o3l" id="ozk-tr-xOH"/>
                         <outlet property="dragView" destination="d23-3R-obg" id="hQN-bU-x73"/>
                         <outlet property="imageView" destination="NBe-nH-eQE" id="E1z-5D-KQt"/>
+                        <outlet property="jpgButton" destination="SdP-6T-FC5" id="7xz-pT-uCb"/>
+                        <outlet property="midiButton" destination="15i-4n-Dup" id="uZR-Ku-iIx"/>
                         <outlet property="progressBar" destination="FEW-8g-vid" id="frO-tO-73V"/>
                         <outlet property="progressIndicator" destination="5ag-vn-lYI" id="apO-Ma-HuK"/>
                         <outlet property="transcribeButton" destination="NoM-Mn-GA7" id="av2-lr-yKJ"/>
@@ -777,4 +834,9 @@
             <point key="canvasLocation" x="60" y="736.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="csv" width="348" height="512"/>
+        <image name="jpg" width="348" height="512"/>
+        <image name="midi" width="348" height="512"/>
+    </resources>
 </document>

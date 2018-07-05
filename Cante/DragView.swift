@@ -80,7 +80,7 @@ class DragView: NSView {
         guard let board = drag.draggingPasteboard().propertyList(forType: NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")) as? NSArray,
             let path = board[0] as? String
             else { return false }
-
+        
         // Check if is a directory
         var directory: ObjCBool = ObjCBool(false)
         exists = FileManager.default.fileExists(atPath: path, isDirectory: &directory)
@@ -112,7 +112,7 @@ class DragView: NSView {
         
         // call newData callback function
         delegate?.newData()
-
+        
         return true
     }
 }

@@ -14,9 +14,9 @@
 #include "essentia/algorithmfactory.h"
 #include "essentia/essentiamath.h"
 #include <dirent.h>
-#include <jdksmidi/world.h>
-#include <jdksmidi/filewrite.h>
-#include <jdksmidi/filewritemultitrack.h>
+//#include "jdksmidi/world.h"
+//#include "jdksmidi/filewrite.h"
+//#include "jdksmidi/filewritemultitrack.h"
 
 using namespace std;
 using namespace essentia;
@@ -157,25 +157,32 @@ int CppClass::run(std::string directorio){
     
     
     // ESSENTIA SETUP //
+    cout << "ESSENTIA SETUP" << endl;
     essentia::init();
+    cout << "algo factory" << endl;
     AlgorithmFactory& factory = standard::AlgorithmFactory::instance();
     // smoothing filter
+    cout << "smoothing filters" << endl;
     Algorithm* mov15   = factory.create("MovingAverage", "size", 15);
     Algorithm* mov30   = factory.create("MovingAverage", "size", 30);
     Algorithm* mov100   = factory.create("MovingAverage", "size", 100);
     // channel selection
+    cout << "frame cutter" << endl;
     Algorithm* frameCutterL = factory.create("FrameCutter", "frameSize", frameSizeFeat, "hopSize", hopSizeFeat);
     Algorithm* frameCutterR = factory.create("FrameCutter", "frameSize", frameSizeFeat, "hopSize", hopSizeFeat);
+    cout << "window" << endl;
     Algorithm* wL     = factory.create("Windowing","type", "blackmanharris62");
     Algorithm* wR     = factory.create("Windowing","type", "blackmanharris62");
+    cout << "spectrum" << endl;
     Algorithm* specL  = factory.create("Spectrum");
     Algorithm* specR  = factory.create("Spectrum");
     
     // bark band extraction
+    cout << "bark band stuff.." << endl;
     Algorithm* bark = factory.create("BarkBands", "numberBands",numBands);
     Algorithm* frameCutter = factory.create("FrameCutter", "frameSize", frameSizePitch, "hopSize", hopSizePitch);
     Algorithm* spec  = factory.create("Spectrum");
-    
+    cout << "ESSENTIA SETUP DONE" << endl;
     
     // I/O
     vector<string> filenames;
@@ -260,9 +267,11 @@ int CppClass::run(std::string directorio){
      }*/
     
     // LOAD AUDIO FILE
+    cout << "load audio" << endl;
     vector<StereoSample> audio;
     int numChannels=0;
     Real sampleRate=0;
+    cout << "dir:" << directorio << endl;
     Algorithm* audioLoad = factory.create("AudioLoader",
                                           "filename", directorio);
     string m5, codec;
@@ -278,7 +287,7 @@ int CppClass::run(std::string directorio){
     delete audioLoad;
     
     // SELECT CHANNEL (EXTRACTING LOW-LEVEL DESCRIPTORS...) //
-    
+    cout << "channel selection" << endl;
     int b1Low=round((0.5*frameSizeFeat*f1Low)/(0.5*sampleRate));
     int b1High=round((0.5*frameSizeFeat*f1High)/(0.5*sampleRate));
     int b2Low=round((0.5*frameSizeFeat*f2Low)/(0.5*sampleRate));
@@ -365,6 +374,7 @@ int CppClass::run(std::string directorio){
     }
     
     // MELODY EXTRACTION //
+    cout << "melody extraction" << endl;
     // extracting pitch...
     Algorithm* melodia     = factory.create("PredominantPitchMelodia","sampleRate", sampleRate, "frameSize", frameSizePitch, "hopSize", hopSizePitch, "voiceVibrato", true, "minFrequency", minFreq, "maxFrequency", maxFreq,"voicingTolerance",vTh);
     pitch.clear();
@@ -379,6 +389,7 @@ int CppClass::run(std::string directorio){
     if(polyphonic){
         
         // CONTOUR FILTERING //
+        cout << "contour filtering" << endl;
         // filtering contours...
         // extract bark bands
         frame.clear();
@@ -527,7 +538,7 @@ int CppClass::run(std::string directorio){
     
     
     // SEGMENT CONTOURS
-    
+    cout << "segmenting" << endl;
     // re-segment
     // find contour start and end indices
     startC.clear();
